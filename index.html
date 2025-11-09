@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-content">
+            <div class="profile-image">
+                <img src="Jinx.png" alt="Profile Image">
+            </div>
+            <div class="profile-info">
+                <h1>Francisco Jr. P. Bustillo</h1>
+                <h5>BSIT 3-1</h5>
+            </div>
+        </div>
+        
+        <div class="nav-buttons">
+            <button class="nav-btn active" data-target="about-me">
+                <i class="fa-solid fa-user"></i> About Me
+            </button>
+            <button class="nav-btn" data-target="contacts">
+                <i class="fa-solid fa-phone"></i> Contacts
+            </button>
+            <button class="nav-btn" data-target="my-skills">
+                <i class="fa-solid fa-screwdriver-wrench"></i> My Skills
+            </button>
+            <button class="nav-btn" data-target="education">
+                <i class="fa-solid fa-book-open"></i> Education
+            </button>
+        </div>
+        
+        <div class="content-sections">
+            <div id="about-me" class="content-section active">
+                <h2>About Me</h2>
+                    <p>Hi! I’m a student from <strong>Sumulong College of Arts and Sciences</strong>. 
+                        I like playing online games such as Valorant because they 
+                        are fun and help me think and work with others. 
+                        I am also interested in web development and game development. 
+                        I enjoy learning how websites and games are made and hope to create my own in the future.</p>    
+            </div>
+            
+        <div id="contacts" class="content-section">
+            <h2>Contacts</h2>
+            <div class="contact-list">
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+63 **********</span>
+                </div>
+                <a href="https://github.com/Frankeyfrank" class="contact-item" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                    <span>FrankeyFrank</span>
+                </a>
+                <a href="https://www.tiktok.com/@frankeyfries" class="contact-item" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i>
+                    <span>Frankey</span>
+                </a>
+            </div>
+        </div>
+            
+            <div id="my-skills" class="content-section">
+                <h2>My Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <ul>
+                            <li>Java</li>
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Web Development</h3>
+                        <ul>
+                            <li>HTML/CSS</li>
+                            <li>Flask</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Other Skills</h3>
+                        <ul>
+                            <li>Basic Networking</li>
+                            <li>Basic Troubleshooting</li>
+                            <li>Git & GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="education" class="content-section">
+                <h2>Education</h2>
+                <div class="education-timeline">
+                    <div class="education-item">
+                        <h3><i class="fa-solid fa-graduation-cap"></i> Bachelor of Science in Information Technology</h3>
+                        <p class="institution">Sumulong College of Arts and Sciences</p>
+                        <p class="duration">2023 - Present</p>
+                    </div>
+                    <div class="education-item">
+                        <h3><i class="fa-solid fa-graduation-cap"></i> Senior High School</h3>
+                        <p class="institution">Sumulong College of Arts and Sciences</p>
+                        <p class="duration">2021 - 2023</p>
+                    </div>
+                    <div class="education-item">
+                        <h3><i class="fa-solid fa-graduation-cap"></i> High School</h3>
+                        <p class="institution">San Roque National High School</p>
+                        <p class="duration">2017 - 2021</p>
+                    </div>
+                    <div class="education-item">
+                        <h3><i class="fa-solid fa-graduation-cap"></i> Elementary School</h3>
+                        <p class="institution">Our Lady of Peace School Extension</p>
+                        <p class="duration">2011 - 2017</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
