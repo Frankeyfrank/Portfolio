@@ -1,26 +1,42 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all navigation buttons and content sections
+    // Navigation functionality
     const navButtons = document.querySelectorAll('.nav-btn');
     const contentSections = document.querySelectorAll('.content-section');
     
-    // Add click event listeners to navigation buttons
     navButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Get the target section ID from data attribute
             const targetId = this.getAttribute('data-target');
             
-            // Remove active class from all buttons and sections
             navButtons.forEach(btn => btn.classList.remove('active'));
             contentSections.forEach(section => section.classList.remove('active'));
             
-            // Add active class to clicked button
             this.classList.add('active');
-            
-            // Show the target section
             document.getElementById(targetId).classList.add('active');
         });
     });
     
-    // Initialize the first section as active
+    // Copy contact info functionality
+    const copyableItems = document.querySelectorAll('.contact-item.copyable');
+    
+    copyableItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const textToCopy = this.querySelector('span').textContent;
+            
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const originalText = this.querySelector('span').textContent;
+                this.querySelector('span').textContent = 'Copied!';
+                this.style.opacity = '0.7';
+                
+                setTimeout(() => {
+                    this.querySelector('span').textContent = originalText;
+                    this.style.opacity = '1';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        });
+    });
+    
+    // Initialize first section
     document.querySelector('.nav-btn.active').click();
 });
